@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>06.color</title>
+  <style>
+    h1 {
+      /* #R(2)G(2)B(2) */
+      /* 빛의 3원색 : 다 섞으면 흰색 */
+      /* 0 ~ 255(십진수): 00 ~ ff(16진수) */
+      background-color: #d2a9f9;
+      /* white, #fff, #000 */
+      color: #ffffff;
+    }
+
+    p {
+      /* 10진수 표기법 */
+      background-color: rgb(200, 10, 150);
+    }
+
+    div {
+      /* rgba(r, g, b, a) */
+      /* a(alph) : 투명도 값은 0(투명) ~ 1(불투명) 사이의 실수 */
+      /* 배경색이 있다면 배경색이 투명도에 따라서 섞인다. */
+      /* color: 전경색(foreground), 글자색 */
+      /* background-color : 배경색, 요소의 범위까지 색이 칠해짐 */
+      /* 16진수 표기법으로 투명도 표기 가능함 : r(2)g(2)b(2)a(2) */
+      /* 16진수 : 0~9 a b c d e f */
+      color: rgb(200, 10, 150, 0.9);
+      background-color: lightblue;
+    }
+  </style>
+</head>
+<!-- -->
+
+<body>
+
+  <h1>Lorem, ipsum.</h1>
+  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque provident repellendus asperiores. Ex optio tenetur
+    architecto vero laborum eos nostrum reiciendis dicta, consequuntur itaque quia magni doloribus in incidunt quae sed
+    ut soluta assumenda qui quibusdam ipsa velit asperiores quam? Dolores fugit quidem sit fuga praesentium autem
+    eveniet quia nihil cum similique repellendus inventore voluptatum illo, saepe non, porro vel expedita eaque!
+    Voluptatum distinctio, quas eum inventore debitis totam repellat officia labore accusamus atque doloremque deleniti
+    laboriosam? Libero, praesentium perferendis! Adipisci quod quam molestias rem magni, odit minima quaerat veritatis
+    culpa voluptate suscipit cumque eaque id facilis? Molestiae, incidunt aspernatur!</p>
+  <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum voluptas iusto nulla odio quas quis tempora
+    id inventore laborum consectetur.</div>
+
+</body>
+
+</html>

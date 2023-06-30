@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>05.selector-priority</title>
+  <style>
+    /* 자식(children) 선택자 */
+    /* 부모선택자 > 자식선택자 > .. > .. */
+    header>h1 {
+      color: red;
+    }
+
+    header>nav>h1 {
+      color: green;
+    }
+
+    section>h1 {
+      color: orange;
+    }
+
+    #menu-head-text {
+      color: aqua;
+    }
+
+    .primary-text {
+      color: blueviolet;
+    }
+
+    .warning-bg {
+      background-color: orange;
+    }
+
+    #layout.light {
+      background-color: yellowgreen;
+    }
+
+    #layout.dark {
+      background-color: darkblue;
+    }
+  </style>
+</head>
+
+<body>
+
+  <body>
+
+    <!-- style 태그 내의 스타일 속성보다 element style 이 우선순위가 높다 -->
+    <!-- 좀 더 구첵적인 선택자가 우선순위가 높다. -->
+    <!-- 예) 
+         header h1 : 자손 선택자(범위가 넓음),
+         heaer > nav > h1 : 자식 선택자(범위가 좁음)
+    -->
+    <!-- 예)
+        #text
+        .primary-text
+        id선택자가 class보다 우선순위가 높음
+    -->
+
+    <header>
+      <!-- Style Tag보다 inline Tag가 먼저 먹는다. -->
+      <h1 style="color:brown">Lorem, ipsum.</h1>
+      <nav>
+        <h1 id="menu-head-text" class="primary-text warning-bg">Navigation</h1>
+      </nav>
+    </header>
+
+    <section>
+      <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit culpa numquam tenetur porro. Nisi eaque hic
+        odit, veritatis natus aut!</h1>
+
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui explicabo fugit hic dolorem eaque recusandae
+        temporibus alias adipisci dicta consequatur.</p>
+
+    </section>
+    <hr>
+
+    <div id="layout" class="light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis, reprehenderit?
+    </div>
+    <hr>
+
+
+    <footer>
+      <nav>
+        <h1 class="primary-text">Site Map</h1>
+      </nav>
+    </footer>
+  </body>
+</body>
+
+</html>
