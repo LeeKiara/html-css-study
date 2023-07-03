@@ -66,6 +66,7 @@
       font-weight: bold;
     }
 
+    /* 자식결합자(>) : <header>요소 바로 아래에 위치하는 모든 <div>요소에 적용  */
     header>div {
       color: #232323;
       background: #fff8e8;
@@ -73,6 +74,7 @@
       border-left: solid 15px #ffc06e;
     }
 
+    /* 자손결합자(공백) : <section>요소안에 위치하는 모든 <h2>요소에 적용 */
     section h2 {
       color: #000000;
       background-color: #d69f7e;
@@ -83,6 +85,7 @@
       border-left: solid 15px #a99985;
     }
 
+    /* id가 section-layout 인 경우 적용 */
     #section-layout {
       background-color: #FBEDE8;
       padding-left: 5%;
@@ -90,29 +93,20 @@
       width: var(--default-width);
     }
 
+    /* class가 recipe인 경우 적용 */
     .recipe {
       text-align: center;
     }
 
+    /* class가 text-bold인 경우 적용 */
     .text-bold {
-      font-size: 1.5em;
+      /* 최상위 html font-size(16px)의 1.5배 (반응형 웹 디자인에 유용) */
+      font-size: 1.2rem;
       font-style: italic;
       font-weight: bold;
     }
 
-    /*     
-    #recipe-image {
-      text-align: center;
-    }
-
-    #recipe-desc {
-      font-size: 1.5em;
-      font-style: italic;
-      font-weight: bold;
-      text-align: center;
-    } */
-
-
+    /* class가 gotop인 경우 적용 */
     .gotop {
       display: flex;
       justify-content: right;

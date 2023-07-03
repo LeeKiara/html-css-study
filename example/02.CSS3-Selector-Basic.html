@@ -6,8 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
+    html {
+      /* font-size: 24px; */
+      /* 웹 브라우저에서 문서의 기본 폰트 크기는 16px */
+      font-size: 16px;
+    }
+
+    body {
+      font-size: 12px;
+    }
+
+    /* https://coolors.co/606c38-283618-fefae0-dda15e-bc6c25 */
     h1 {
-      color: red;
+      background-color: #283618;
+      color: #ffffff;
     }
 
     #warning-header {
@@ -15,16 +27,37 @@
     }
 
     p {
-      color: blue;
+      /* 0 ~ 255 */
+      background-color: rgb(96, 108, 56);
+      color: rgb(255, 255, 255);
+
+      /* 
+        - em : 부모 엘리먼트의 폰트 크기와 같음
+               만약 body 엘리먼트의 font-size 를 20px로 정한 경우, 1em = 20px 이고 2em = 40px 임
+
+        - rem : 부모 엘리먼트가 아니라 최상위 요소인 <html> 요소의 크기를 기준으로 결정됨
+        
+        */
+      font-size: 0.9em;
     }
 
     .primary {
       color: black;
-      background-color: green;
+      /* alpha: 0 ~ 1의 실수값, 0투명-1불투명*/
+      background-color: rgba(221, 99, 194, 0.9);
     }
 
     .text-white {
-      color: white;
+      /* ffffff, 000000 단축 표기 가능 */
+      color: #fff
+    }
+
+    header h1 {
+      color: darkcyan;
+    }
+
+    section h1 {
+      color: orange;
     }
   </style>
 </head>
@@ -48,15 +81,7 @@
   </p>
   <p class="primary text-white">Lorem ipsum dolor sit amet</p>
 
-  <style>
-    header h1 {
-      color: darkcyan;
-    }
 
-    section h1 {
-      color: orange;
-    }
-  </style>
   <header>
     <h1 class="title">header > h1 : Lorem ipsum</h1>
     <nav>

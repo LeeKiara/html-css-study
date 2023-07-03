@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  /* 
+  자식결합자(>) : <header>요소 바로 아래에 위치하는 모든 <h1>요소에 적용  
+  만약... 자손결합자(공백)으로 했다면 <header>요소안에 위치하는 모든 <h1>요소에 적용
+    */
+  header>h1 {
+    color: red;
+  }
+
+  /* 
+  header>nav>h1 {
+    color: green
+  } 
+  */
+
+  section>h1 {
+    color: orange;
+  }
+</style>
+
+<body>
+
+  <header>
+    <textarea name="" id="" cols="500" rows="2">
+      자식결합자(>) : <header>요소 바로 아래에 위치하는 모든 <h1>요소에 적용  
+        만약... 자손결합자(공백)으로 했다면 <header>요소안에 위치하는 모든 <h1>요소에 적용
+    </textarea>
+    <h1 class="title">header>h1 : red => Lorem ipsum</h1>
+    <h1 class="title">header>h1 : red => Lorem ipsum Lorem ipsum</h1>
+    <nav>
+      <h1>header>nav>h1 : green => Navigation</h1>
+    </nav>
+  </header>
+  <section>
+    <h1 class="title">section>h1 : orange => Lorem ipsum</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </section>
+
+</body>
+
+</html>
