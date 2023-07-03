@@ -17,13 +17,22 @@
        주로 색상, 크기값 같은 것들*/
     :root {
       --default-font-size: 14px;
+      --default-width: 850px;
     }
 
     body {
       font-size: var(--default-font-size);
-      width: 850px;
+      width: var(--default-width);
+
       /* 전체 컨텐트 중앙 정렬 , 위/아래는 0으로, 좌우는 균등배분 으로...*/
       margin: 0 auto;
+    }
+
+    /* 전체 요소에 대해서 border-box */
+    * {
+      /* box-sizing: border-bo */
+      /* 엘리먼트 크기계산을 보더 영역까지 */
+      box-sizing: border-box;
     }
 
     ul>li {
@@ -47,6 +56,11 @@
       border-bottom: 1px solid black;
     }
 
+    /* 같은 태그가 몇번째 요소인지 (p태그중에서 3번째)*/
+    tbody>tr:nth-of-type(2n-1) {
+      background-color: #fff8e8;
+    }
+
     header>div {
       color: #232323;
       background: #fff8e8;
@@ -57,7 +71,7 @@
     section>h2 {
       color: #000000;
       background-color: #d69f7e;
-      width: 750px;
+      width: 95%;
       height: 40px;
       padding-top: 10px;
       padding-left: 15px;
@@ -68,7 +82,7 @@
       background-color: #FBEDE8;
       padding-left: 5%;
       padding-top: 2%;
-      width: 95%;
+      width: var(--default-width);
     }
 
     #recipe-image {
@@ -88,6 +102,21 @@
       justify-content: right;
       align-items: center;
       width: 780px;
+    }
+
+    /* href 속성 있는 요소에만 적용*/
+    a:link {
+      text-decoration: none;
+      color: dodgerblue;
+    }
+
+    /* hover: 마우스커서를 올렸울때 */
+    a:hover {
+      background-color: yellow;
+    }
+
+    footer {
+      text-align: center;
     }
   </style>
 </head>
