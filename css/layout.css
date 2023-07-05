@@ -3,17 +3,29 @@
 :root {
   /* --default-font-size: 14px; */
   /* --default-width: 850px; */
+  --border-color: #ffd280;
 }
 
 body {
   
-  width: 850px;
+  width: 900px;
 
   /* 전체 컨텐트 중앙 정렬 , 위/아래는 0으로, 좌우는 균등배분 으로...*/
   margin: 0 auto;
   /* 폰트 적용 */
   font-family: 'Noto Sans KR', sans-serif;
   line-height: 1.45;
+  color: rgb(147, 112, 98);
+
+  background-color: rgb(255, 255, 255);
+  /* no-repeat center cover */
+  background-repeat: no-repeat;
+  background-position: center;
+
+  /* cover; => 이미지 비율에 맞게 잘라줌 */
+  background-size: cover;
+  background-image: url(../img/photo-2.avif);
+
 }
 
 /* 전체 요소에 대해서 border-box */
@@ -27,15 +39,53 @@ nav {
   /* top, left, bottom, right: 중에 1개 */
   /* sticky는 스크롤 영역 안에서 static, 스크롤 영역 밖으로 나가면 fixed 처럼 */
   position: sticky;
-  top: 75px;
-  border: 1px solid #ffd280;
-  background-color: #ffc06e;
+  top: 102px;
+  border: 3px solid #937062;
+  background-color: #EFDCD4;  
+  border-radius: 30px 30px;
+  box-shadow: 10px 10px 10px rgb(128, 128, 128);
+}
+
+/* 자식결합자(>) : <header>요소 바로 아래에 위치하는 모든 <div>요소에 적용  */
+header>div {
+  color: #F5F5F5;
+  background: #937062;
+  padding: 5px 10px;
+  text-align: center;
+  border-radius: 0px 0px 30px 30px;
+}
+
+/* 자손결합자(공백) : <section>요소안에 위치하는 모든 <h2>요소에 적용 */
+section h2 {
+  color: rgb(147, 112, 98);
+  background-color: #FBEDE8;
+  height: 40px;
+  padding-top: 5px;
+  padding-left: 15px;
+  text-align: center;
+}
+
+/* id가 section-layout 인 경우 적용 */
+#section-layout {
+  margin-top: 10px;
+  padding-left: 5%;
+  padding-top: 2%;
+  border: 1px solid darkgray;
   border-radius: 10px 10px;
+  box-shadow: 50px 50px 80px rgb(128, 128, 128);
+  background-color: #FBEDE8;
+}
+
+article {
+  width: 70%;
+  /* border: 1px solid darkgray;
+  box-shadow: 10px 10px 30px darkgray; */
 }
 
 ul {
-  /* font-size: 16px; */
+  font-size: 18px;
   text-align: center;
+  color: #937062;
 }
 
 nav>ul>li {
@@ -47,7 +97,7 @@ nav>ul>li {
 
 /* hover: 마우스커서를 올렸울때 */
 nav>ul>li:hover {
-  background-color: yellow;
+  background-color: lightgoldenrodyellow;
   font-weight: bold;
 }
 
@@ -72,35 +122,8 @@ tbody>tr:nth-of-type(2n-1) {
   background-color: #fff8e8;
 }
 tbody>tr:hover {
-  background-color: yellow;
+  background-color: lightgoldenrodyellow;
   font-weight: bold;
-}
-
-/* 자식결합자(>) : <header>요소 바로 아래에 위치하는 모든 <div>요소에 적용  */
-header>div {
-  color: #232323;
-  background: #fff8e8;
-  padding: 5px 10px;
-  /* border-left: solid 15px #ffc06e; */
-  /* border-right: solid 15px #ffc06e; */
-  text-align: center;
-}
-
-/* 자손결합자(공백) : <section>요소안에 위치하는 모든 <h2>요소에 적용 */
-section h2 {
-  color: #000000;
-  /* background-color: #d69f7e; */
-  height: 40px;
-  padding-top: 5px;
-  padding-left: 15px;
-  text-align: center;
-}
-
-/* id가 section-layout 인 경우 적용 */
-#section-layout {
-  background-color: #FBEDE8;
-  padding-left: 5%;
-  padding-top: 2%;
 }
 
 /* class가 recipe인 경우 적용 */
@@ -131,24 +154,37 @@ section h2 {
 /* href 속성 있는 요소에만 적용*/
 a:link {
   text-decoration: none;
-  color: dodgerblue;
+  color:#937062;
 }
 
-/* hover: 마우스커서를 올렸울때 */
-/* a:hover {
-  background-color: yellow;
-} */
 
 footer {
   text-align: center;
+  color:black;
+}
+
+
+.container {
+  display: flex;
+  padding: 5px;
+}
+
+main {
+  flex: 1;
+}
+
+.sidebar {
+  width: 250px;  
+  padding-left: 0.5%;  
+  margin-top: 10px;
 }
 
 aside>div {
   text-align: center;
-  border: 1px solid darkgray;
+  border: 0.5px solid var(--border-color);
 }
 
 .ad {
-  width: 70%;
+  width: 99%;
 }
 </style>
