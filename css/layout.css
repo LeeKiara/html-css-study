@@ -8,7 +8,7 @@
 
 body {
   
-  width: 900px;
+  width: 60%;
 
   /* 전체 컨텐트 중앙 정렬 , 위/아래는 0으로, 좌우는 균등배분 으로...*/
   margin: 0 auto;
@@ -27,6 +27,18 @@ body {
   background-size: cover;
   background-image: url(../img/photo-2.avif);
 
+}
+
+/* 모바일 버전일 경우.... */
+@media (max-width: 450px) {
+  body {
+      width: 100%;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /* 전체 요소에 대해서 border-box */
@@ -82,15 +94,13 @@ section h2 {
   background-color: #FBEDE8;
 }
 
-article {
-  /* border: 1px solid darkgray;
-  box-shadow: 10px 10px 30px darkgray; */
-}
-
-ul {
+nav ul {
   /* font-size: 18px; */
   text-align: center;
   color: #937062;
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: center;
 }
 
 nav>ul>li {
@@ -105,6 +115,7 @@ nav>ul>li:hover {
   background-color: lightgoldenrodyellow;
   font-weight: bold;
 }
+
 
 table {
   border-collapse: collapse;
@@ -147,14 +158,6 @@ tbody>tr:hover {
   font-style: italic;
   font-weight: bold;
   text-align: center;
-}
-
-/* class가 gotop인 경우 적용 */
-.gotop {
-  display: flex;
-  justify-content: right;
-  align-items: center;
-  width: 780px;
 }
 
 a {

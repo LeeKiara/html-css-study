@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* mobile-first로 디자인/코딩을 해야 합니다. */
+    /* 가장 작은 장치 먼저 */
+    /* 우선순위 1순위 */
+    nav ul {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* min-width : 크기값 */
+    /* 크기값보다 큰 장치에서 min-width 까지 */
+    /* size가 576px 이상일때만 적용 */
+    @media (min-width: 576px) {
+      nav ul {
+        flex-direction: row;
+        justify-content: space-evenly;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="#recipe01">햄치즈 샌드위치</a></li>
+      <li><a href="#recipe02">토마토 스파게티</a></li>
+      <li><a href="#recipe03">두부 스테이크</a></li>
+    </ul>
+  </nav>
+</body>
+
+</html>
