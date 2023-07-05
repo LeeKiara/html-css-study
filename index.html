@@ -7,26 +7,27 @@
   <title>내가 좋아하는 레시피</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/layout.css">
-
 </head>
 
 <body>
 
-  <header>
-    <div id="menu">
-      <h1>내가 좋아하는 요리 레시피!!!</h1>
-    </div>
-  </header>
+  <section class="section-head">
+    <header>
+      <div id="menu">
+        <h1>내가 좋아하는 요리 레시피!!!</h1>
+      </div>
+    </header>
 
-  <nav>
-    <ul>
-      <li><a href="#recipe01">햄치즈 샌드위치</a></li>
-      <li><a href="#recipe02">토마토 스파게티</a></li>
-      <li><a href="#recipe03">두부 스테이크</a></li>
-    </ul>
-  </nav>
+    <nav>
+      <ul>
+        <li><a href="#recipe01">햄치즈 샌드위치</a></li>
+        <li><a href="#recipe02">토마토 스파게티</a></li>
+        <li><a href="#recipe03">두부 스테이크</a></li>
+      </ul>
+    </nav>
+  </section>
 
   <section class="container">
     <article class="main">
@@ -42,42 +43,46 @@
           따뜻한 커피 한잔과 잘 어울려요"
         </div>
 
-        <h3>☞ 재료 목록</h3>
+        <div>
+          <h3>☞ 재료 목록</h3>
 
-        <table>
-          <thead>
-            <th>재료</th>
-            <th>용량</th>
-          </thead>
-          <tbody>
-            <tr>
-              <td>식빵</td>
-              <td><em>4장</em></td>
-            </tr>
-            <tr>
-              <td>치즈</td>
-              <td><em>4장</em></td>
-            </tr>
-            <tr>
-              <td>로메인상추</td>
-              <td><em>8장</em></td>
-            </tr>
-            <tr>
-              <td>크림치즈</td>
-              <td><em>1팩</em></td>
-            </tr>
-          </tbody>
-        </table>
+          <table>
+            <thead>
+              <th>재료</th>
+              <th>용량</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>식빵</td>
+                <td><em>4장</em></td>
+              </tr>
+              <tr>
+                <td>치즈</td>
+                <td><em>4장</em></td>
+              </tr>
+              <tr>
+                <td>로메인상추</td>
+                <td><em>8장</em></td>
+              </tr>
+              <tr>
+                <td>크림치즈</td>
+                <td><em>1팩</em></td>
+              </tr>
+            </tbody>
+          </table>
 
-        <h3>☞ 조리 순서</h3>
-        <ol>
-          <li>식빵 한쪽에 마요네즈, 머스타드소스를 약간만 발라 주세요.</li>
-          <li>치즈 한장, 로메인 상추 3장을 올려 주세요..</li>
-          <li>식빵 한쪽에 크림치즈를 골고루 펴 바른 후 집에 있는 과일 아무거나 올려주세요.<br />
-            크림치즈를 전자렌지나 에어플라이어에 잠깐만 돌리면 부드럽게 잘 발라져요.</li>
-          <li>완성된 샌드위치를 유산지 또는 랩으로 꼭꼭 눌러가면서 잘 포장한 후 잘드는 칼로 가운데를 잘라 주세요. 완성!</li>
-        </ol>
-        <!-- <div class="gotop"><a href="#menu"><img src="./img/상향화살표-small.png" alt=""></a></div> -->
+          <h3>☞ 조리 순서</h3>
+          <ol>
+            <li>식빵 한쪽에 마요네즈, 머스타드소스를 약간만 발라 주세요.</li>
+            <li>치즈 한장, 로메인 상추 3장을 올려 주세요..</li>
+            <li>식빵 한쪽에 크림치즈를 골고루 펴 바른 후 집에 있는 과일 아무거나 올려주세요.<br />
+              크림치즈를 전자렌지나 에어플라이어에 잠깐만 돌리면 부드럽게 잘 발라져요.</li>
+            <li>완성된 샌드위치를 유산지 또는 랩으로 꼭꼭 눌러가면서 잘 포장한 후 잘드는 칼로 가운데를 잘라 주세요. 완성!</li>
+          </ol>
+          <!-- <div class="gotop"><a href="#menu"><img src="./img/상향화살표-small.png" alt=""></a></div> -->
+
+        </div>
+
       </section>
 
       <section id="section-layout">
@@ -189,14 +194,15 @@
     </article>
 
     <aside class="sidebar">
-      <div>
-        <img class="ad one" src="https://thesoban.com/web/upload/NNEditor/20220920/ae6e7f16d8c7916635df2c42e35d7f01.png"
-          alt="">
-        <img class="ad two" src="https://thesoban.com/web/upload/NNEditor/20220920/1e108f70f3d116858b7c3fec7041aa19.png"
-          alt="">
-        <img class="ad three"
-          src="https://thesoban.com/web/upload/NNEditor/20220920/30098c1491038ead643aa322fc381ae9.png" alt="">
-      </div>
+      <span>
+        <img src="https://thesoban.com/web/upload/NNEditor/20220920/ae6e7f16d8c7916635df2c42e35d7f01.png" alt="">
+      </span>
+      <span>
+        <img src="https://thesoban.com/web/upload/NNEditor/20220920/1e108f70f3d116858b7c3fec7041aa19.png" alt="">
+      </span>
+      <span>
+        <img src="https://thesoban.com/web/upload/NNEditor/20220920/30098c1491038ead643aa322fc381ae9.png" alt="">
+      </span>
     </aside>
 
   </section>
@@ -208,7 +214,6 @@
     </cite>
     <address>kiara1234@gmail.com</address>
   </footer>
-
 
 </body>
 
