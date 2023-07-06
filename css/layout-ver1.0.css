@@ -1,0 +1,183 @@
+/* css 변수(variables) */
+:root {
+  /* --default-font-size: 14px; */
+  /* --default-width: 850px; */
+  --border-color: #ffd280;
+}
+
+body {
+  
+  width: 60%;
+
+  /* 전체 컨텐트 중앙 정렬 , 위/아래는 0으로, 좌우는 균등배분 으로...*/
+  margin: 0 auto;
+  /* 폰트 적용 */
+  font-family: 'Nanum Gothic', sans-serif;  
+  font-weight: 400;
+  line-height: 1.45;
+  color: rgb(147, 112, 98);
+
+  background-color: rgb(255, 255, 255);
+  /* no-repeat center cover */
+  background-repeat: no-repeat;
+  background-position: center;
+
+  /* cover; => 이미지 비율에 맞게 잘라줌 */
+  background-size: cover;
+  background-image: url(../img/photo-2.avif);
+
+}
+
+/* 모바일 버전일 경우.... */
+@media (max-width: 450px) {
+  body {
+      width: 100%;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* 전체 요소에 대해서 border-box */
+* {
+  /* box-sizing: 엘리먼트 크기계산을 보더 영역까지 */
+  box-sizing: border-box;
+}
+
+.section-head {
+  /* position: absolute, fixed, sticky; */
+  /* top, left, bottom, right: 중에 1개 */
+  /* sticky는 스크롤 영역 안에서 static, 스크롤 영역 밖으로 나가면 fixed 처럼 */
+  position: sticky;
+  top: 1px;
+}
+
+section nav {
+  margin-top: 5px;
+  border: 3px solid #937062;
+  background-color: #EFDCD4;  
+  border-radius: 30px 30px;
+  box-shadow: 10px 10px 10px rgb(128, 128, 128);
+  font-size: 1.3rem;
+}
+
+header div {
+  color: #F5F5F5;
+  background: #937062;
+  text-align: center;
+  border-radius: 0px 0px 30px 30px;
+  /* 최상위 html font-size(16px)의 1.5배 (반응형 웹 디자인에 유용) */
+  font-size: 1.5rem;
+}
+
+h2 {
+  color: rgb(147, 112, 98);
+  background-color: #FBEDE8;
+  height: 40px;
+  padding-top: 5px;
+  text-align: center;
+}
+
+article {
+  margin-top: 13px;
+  padding-left: 5%;
+  border: 1px solid darkgray;
+  border-radius: 10px 10px;
+  box-shadow: 50px 50px 80px rgb(128, 128, 128);
+  background-color: #FBEDE8;
+}
+
+article>h3:nth-of-type(1) {
+  font-style: italic;
+  text-align: center;
+}
+
+nav ul {
+  /* font-size: 18px; */
+  text-align: center;
+  color: #937062;
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: center;
+}
+
+nav>ul>li {
+  display: inline;
+  /* 각 li 요소 사이에 간격 설정 */
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+/* hover: 마우스커서를 올렸울때 */
+nav>ul>li:hover {
+  background-color: lightgoldenrodyellow;
+  font-weight: bold;
+}
+
+table {
+  border-collapse: collapse;
+  width: 95%;
+}
+
+th {
+  text-align: center;
+  border-bottom: 2px solid black;
+}
+
+td {
+  text-align: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+/* tbody 태그 안의 tr 중 홀수번째만 */
+tbody>tr:nth-of-type(2n-1) {
+  background-color: #fff8e8;
+}
+tbody>tr:hover {
+  background-color: lightgoldenrodyellow;
+  font-weight: bold;
+}
+
+img {
+  width: 95%
+}
+
+a {
+    color:#937062;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+footer {
+  text-align: center;
+  color:black;
+}
+
+.sidebar {
+  display: inline-block;
+  position: relative;
+  margin-top: 5px;
+}
+
+/* span tag는 inline tag이므로 크기제어하려면 inline-block으로 처리해줘야 함 */
+.sidebar span {
+  display: inline-block;
+  width: 33%;
+}
+
+/* <span>의 크기에 이미지 사이즈가 맞추어지도록 설정함 */
+.sidebar img {
+  max-width: 100%;
+  /* 이미지가 블록 요소로 표시되도록 함 */
+  display: bloock;
+}
+
+aside>div {
+  text-align: center;
+  border: 0.5px solid #ffd280;
+}
+
+
