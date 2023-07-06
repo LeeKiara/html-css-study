@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      height: 100px;
+      width: 100px;
+      background-color: green;
+
+      /* transition: s/ms */
+      /* transition: 지속시간(s/ms) 지연시간 타이밍함수*/
+      /* transition: 적용할 시간(s/ms) 지속시간 지연시간 타이밍함수*/
+      transition: 1s 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+      transition-timing-function: ease-in-out;
+    }
+
+    div:hover {
+      /* 왼쪽, 오른쪽 기준
+      width: 150px;
+      height: 150px; 
+      */
+      /* transform: 변형 시킬 함수(값) */
+      /* scale(배수값-실수); */
+      /* transform: scale(1.5); */
+      /* transform-origin: left top; */
+      /* retate(값) - 회전 */
+      /* transform: translate(100px) rotate(90deg) skew(30deg); */
+      /* transform: perspective(500px) rotatey(90deg); */
+      transform: rotateX(90deg);
+      transform-origin: left;
+      background-color: red;
+      /* height: 150px; 
+      */
+
+      transform: translateX(10px) rotatey(90deg);
+
+
+
+    }
+  </style>
+</head>
+
+<body>
+  <!--   
+  트랜지션(transition)이란
+  속성값의 변화가 있을때 중간과정을 표현
+   -->
+  <!-- 속성값은 숫자이거나, 숫자로 표현할 수 있는 경우 -->
+
+  <div></div>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quo quos obcaecati, assumenda rerum, officiis dolores
+    quia doloremque, facilis ut corporis nemo minus adipisci eaque culpa nobis tempora possimus amet.
+  </p>
+</body>
+
+</html>

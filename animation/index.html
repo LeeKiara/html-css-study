@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* @keyframes 애니메이션이름 {재생순서} */
+    @keyframes ani {
+      0% {
+        transform: translate(0, 0) rotate(0deg);
+      }
+
+      25% {
+        transform: translate(100px, 0) rotate(90deg);
+        background-color: orange;
+      }
+
+      50% {
+        transform: translate(100px, 100px) rotate(180deg);
+        background-color: yellow;
+      }
+
+      75% {
+        transform: translate(0, 100px) rotate(270deg);
+        background-color: green;
+      }
+
+      100% {
+        transform: translate(0, 0) rotate(360deg);
+        background-color: blue;
+      }
+    }
+
+    @keyframes ani2 {
+      from {
+        transform: translate(0, 0);
+      }
+
+      to {
+        transform: translate(100px, 100px);
+
+      }
+    }
+
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: black;
+
+      /* animation: 재생시간 타이밍함수... */
+      /* forwards: 재생이 끝난시점을 유지, 원래상태로 복귀X */
+      /* animation: ani2 4s linear forwards; */
+      /* infinite: 무한반복 */
+      /* animation: ani2 4s ease-in-out infinite; */
+      /* alternate: 교대로 */
+      animation: ani 4s linear infinite alternate;
+      animation-play-state: paused;
+    }
+
+    div:hover {
+      /* 재생상태 */
+      animation-play-state: running;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- css 애니메이션 재생 -->
+  <!-- 지정해 놓은 규칙에 따라서 재생되는 효과 -->
+  <!-- 규칙은 keyframe, 재생순서(sequence) 단위로 지정 -->
+  <!-- 예) 0% 25% 50% 75% 100% -->
+  <!-- 트랜지션과 동일하게 각 구간 중간과정을 적용해줌 -->
+  <div>
+
+  </div>
+</body>
+
+</html>

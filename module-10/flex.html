@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body,
+    nav,
+    main,
+    aside,
+    article,
+    section {
+      border: 1px solid black;
+    }
+  </style>
+
+</head>
+
+<body style="display: flex;flex-direction: column;">
+
+  <nav>
+    <ul>
+      <li>a</li>
+      <li>b</li>
+      <li>c</li>
+    </ul>
+  </nav>
+
+  <main>
+    <aside>
+      <p>aside aside aside aside</p>
+    </aside>
+    <article style="display: flex; flex-direction: row;justify-content: space-between;">
+      <section style="border:1px solid rgb(27, 6, 105);">
+        <p>article > section > Lorem.</p>
+      </section>
+      <section style="display: flex;  flex-direction: column;border:1px solid rgb(27, 6, 105); width: 300px;">
+        <span>div1</span>
+        <span>div2</span>
+        <span>div3</span>
+      </section>
+      <section style="border:1px solid rgb(27, 6, 105);">
+        <p>article > section > Lorem.</p>
+      </section>
+    </article>
+    <footer>
+      <p>footer footer footer</p>
+    </footer>
+  </main>
+
+</body>
+
+</html>

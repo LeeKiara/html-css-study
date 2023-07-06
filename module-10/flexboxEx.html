@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    header,
+    nav,
+    div,
+    ul,
+    main,
+    aside,
+    article,
+    section,
+    footer {
+      border: 1px solid black;
+    }
+
+    /* body 영역을 flexbox로 지정 */
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /*
+    body 안의 레이어 :
+      header, main, footer
+    */
+    header,
+    footer {
+      flex: 1;
+    }
+
+    /* main 영역을 flexbox로 지정 */
+    main {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* small(모바일 버전) */
+
+    /* medium */
+    @media (min-width: 768px) {}
+
+    /* large (PC 버전) */
+    @media (min-width: 1200px) {
+      main {
+        flex-direction: row;
+      }
+
+      nav,
+      aside {
+        flex: 1;
+        justify-content: top;
+      }
+
+      article {
+        flex: 4;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>header 제목 </h1>
+    <div class="banner" style="text-align: center;">Advertising</div>
+  </header>
+
+  <main>
+    <nav>
+      <ul>
+        <li>nav - 리스트1</li>
+        <li>nav - 리스트2</li>
+        <li>nav - 리스트3</li>
+      </ul>
+    </nav>
+
+    <article style="height: 700px;">
+      <section>article > section1</section>
+      <section>article > section2</section>
+      <section>article > section3</section>
+    </article>
+
+    <aside>silder silder silder</aside>
+
+  </main>
+
+  <footer>
+    footer footer footer
+  </footer>
+</body>
+
+</html>
