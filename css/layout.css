@@ -1,60 +1,34 @@
-    /* grid 이름 정의 */
-    header {
-      grid-area: header;
+
+    /* body 영역을 flexbox로 지정 */
+    body {
+      display: flex;
+      flex-direction: column;
+
+      /* 폰트 적용 */
+      font-family: 'Nanum Gothic', sans-serif;
+      line-height: 1.45;
+      color: rgb(147, 112, 98);
+      background-color: rgb(255, 255, 255);
+
+      /* no-repeat center cover */
+      background-repeat: no-repeat;
+      background-position: center;
+
+      /* cover; => 이미지 비율에 맞게 잘라줌 */
+      background-size: cover;
+      background-image: url(../img/photo-2.avif);
     }
 
-    nav {
-      grid-area: nav;
-      height: fit-content;
-    }
-
-    .banner {
-      grid-area: banner;
-    }
-
-    article {
-      grid-area: content;
-      height: fit-content;
-      text-align: center;
-    }
-
-    article div {
-      margin: 10px 20px;
-    }
-
-
-    aside {
-      grid-area: sidebar;
-      height: fit-content;
-    }
-
-    footer {
-      grid-area: footer;
+    main {
+      margin-top: 10px;
     }
 
     header,
-    nav,
-    .banner,
-    nav,
-    article,
+    /* span:nth-of-type(1), */
     aside,
-    hr,
-    footer {
+    hr {
       background-color: rgb(255, 255, 255);
       border: 2px solid #937062;
-    }
-
-    header {
-      color: #F5F5F5;
-      background: #937062;
-      border-radius: 0px 0px 30px 30px;
-      /* 최상위 html font-size(16px)의 1.5배 (반응형 웹 디자인에 유용) */
-      font-size: 1.1rem;
-    }
-
-    hr {
-      margin: 0.5em 0.5em;
-      border: 1px solid #937062;
     }
 
     nav {
@@ -65,8 +39,51 @@
       font-size: 1.2rem;
     }
 
+    nav a {
+      color: #937062;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    header {
+      color: #F5F5F5;
+      background: #937062;
+      border-radius: 0px 0px 30px 30px;
+      /* 최상위 html font-size(16px)의 1.5배 (반응형 웹 디자인에 유용) */
+      font-size: 1.1rem;
+      text-align: center;
+    }
+
+    /* receipes */
+    section {
+      border: 2px solid #937062;
+      background-color: #FBEDE8;
+      border-radius: 10px 10px;
+      box-shadow: 20px 20px 40px rgb(128, 128, 128);
+      margin-bottom: 10px;
+    }
+
+    /* 재료목록&재료순서 div  */
+    section div:nth-of-type(2) {
+      margin: 0px 10px;
+    }
+
+    hr {
+      margin: 0.5em 0.5em;
+      border: 1px solid #937062;
+    }
+
+    img {
+      width: 95%
+    }
+
+    article {
+      text-align: center;
+      margin-top: 10px;
+    }
+
     h3,
-    li {
+    ol {
       text-align: left;
     }
 
@@ -96,117 +113,124 @@
       font-weight: bold;
     }
 
-    /* small */
-    body {
-      display: grid;
-      gap: 20px;
-      grid-template-areas:
-        "header"
-        "nav"
-        "banner"
-        "content"
-        "sidebar"
-        "footer";
-
-      /* 폰트 적용 */
-      font-family: 'Nanum Gothic', sans-serif;
-      line-height: 1.45;
-      color: rgb(147, 112, 98);
-      background-color: rgb(255, 255, 255);
-
-      /* no-repeat center cover */
-      background-repeat: no-repeat;
-      background-position: center;
-
-      /* cover; => 이미지 비율에 맞게 잘라줌 */
-      background-size: cover;
-      background-image: url(../img/photo-2.avif);
-    }
-
-    article {
-      background-color: #FBEDE8;
-      border-radius: 10px 10px;
-      box-shadow: 50px 50px 80px rgb(128, 128, 128);
-    }
-
-    img {
-      width: 95%
-    }
-
-    a {
-      color: #937062;
-      text-decoration: none;
-      font-weight: 700;
+    footer {
+      text-align: center;
+      color: black;
+      font-weight: 800;
+      margin-top: 10px;
     }
 
     aside {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
+      border-radius: 5px 5px;
     }
 
+    /*
+    body 안의 레이어 :
+      header, main, footer
+    */
+    header,
+    footer {
+      flex: 1;
+    }
+
+    /* main 영역을 flexbox로 지정 */
+    main {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* nav 영역을 flexbox로 지정 */
+    nav ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      list-style: none;
+    }
+
+    /* small(모바일 버전) */
 
     /* medium */
     @media (min-width: 768px) {
-      body {
-        width: 700px;
-        margin: 0 auto;
-        grid-template-columns: 2fr 5fr;
-        grid-template-areas:
-          "header   header"
-          "banner   banner"
-          "nav      nav"
-          "sidebar  content"
-          "footer  footer";
-      }
 
-      nav ul {
-        display: flex;
-        justify-content: space-evenly;
-      }
-
-      aside {
-        display: flex;
-        height: 210px;
+      main {
         flex-direction: column;
-        justify-content: space-evenly;
       }
 
-    }
+      article {
+        flex: 4;
 
-    /* large */
-    @media (min-width: 1200px) {
-      body {
-        width: 1200px;
-        margin: 0 auto;
-        grid-template-columns: 3fr 7fr 2fr;
-        grid-template-areas:
-          "header header  header"
-          "banner banner  banner"
-          "nav    content sidebar"
-          "footer footer  footer"
+        display: flex;
+        /* section 들과 aside 를 세로로 정렬하기 위함 */
+        flex-direction: row-reverse;
+        margin-top: 0px;
+      }
+
+      /* section list */
+      span:nth-of-type(1) {
+        flex: 8;
+      }
+
+      /* aside */
+      span:nth-of-type(2) {
+        flex: 2;
+      }
+
+      nav,
+      aside {
+        position: sticky;
+        height: fit-content;
+        /* nav 상단이 현재 위치에서 1rem(16px)만큼 아래로 이동 */
       }
 
       nav {
-        position: sticky;
+        margin-bottom: 20px;
         top: 1rem;
       }
 
+      aside {
+        margin-right: 5px;
+        top: 7rem;
+      }
+
       nav ul {
-        flex-direction: column;
+        flex-direction: row;
+      }
+
+    }
+
+    /* large (PC 버전) */
+    @media (min-width: 1200px) {
+      main {
+        flex-direction: row;
+      }
+
+      nav,
+      aside {
+        flex: 1;
+        justify-content: top;
+        position: sticky;
+      }
+
+      nav {
+        margin-right: 10px;
       }
 
       aside {
+        margin-left: 5px;
+        top: 1rem;
+      }
+
+      article {
+        /* section 들과 aside 를 가로로 정렬하기 위함 */
+        flex-direction: row;
+        margin-top: 0px;
+      }
+
+      nav ul {
         display: flex;
-        height: 210px;
         flex-direction: column;
         justify-content: space-evenly;
       }
 
-      footer {
-        text-align: center;
-        color: black;
-        border-style: none;
-      }
-
     }
+  

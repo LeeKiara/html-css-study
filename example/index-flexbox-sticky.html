@@ -47,37 +47,56 @@
     /* medium */
     @media (min-width: 768px) {
       main {
-        flex-direction: row;
+        flex-direction: column;
       }
 
       article {
         flex: 4;
 
         display: flex;
-        flex-direction: column;
+        /* section 들과 aside 를 세로로 정렬하기 위함 */
+        flex-direction: row-reverse;
       }
+
+      /* section list */
+      div:nth-of-type(1) {
+        flex: 8;
+      }
+
+      /* aside */
+      div:nth-of-type(2) {
+        flex: 2;
+      }
+
+      nav,
+      aside {
+        position: sticky;
+        height: fit-content;
+        /* nav 상단이 현재 위치에서 1rem(16px)만큼 아래로 이동 */
+        top: 1rem;
+      }
+
     }
 
     /* large (PC 버전) */
     @media (min-width: 1200px) {
-      /* main {
+      main {
         flex-direction: row;
-      } */
+      }
 
       nav,
       aside {
         flex: 1;
         justify-content: top;
+        position: sticky;
       }
 
       article {
-        flex: 4;
-
-        display: flex;
+        /* section 들과 aside 를 가로로 정렬하기 위함 */
         flex-direction: row;
       }
 
-      div:nth-of-type(2) {}
+
 
     }
   </style>
@@ -98,14 +117,14 @@
       </ul>
     </nav>
 
-    <article style="height: 700px;">article
+    <article style="height: 2000px;">article
       <div>div
         <section>section1</section>
         <section>section2</section>
         <section>section3</section>
       </div>
       <div>div
-        <aside>silder </aside>
+        <aside>aside </aside>
       </div>
     </article>
 
