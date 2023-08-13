@@ -1,0 +1,117 @@
+body,
+input[type="text"],
+input[type="date"],
+textarea {
+  /* 폰트 적용 */
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+body {
+  line-height: 1.45;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+container {
+  width: 90%;
+  max-width: 800px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  margin: 0;
+}
+
+form>div {
+  margin-bottom: 10px;
+}
+
+label {
+  display: inline-block;
+  width: 120px;
+  font-weight: 700;
+  text-align: right;
+  padding-right: 20px;
+}
+
+label:nth-of-type(2) {
+  display: inline-block;
+  width: 120px;
+  font-weight: 700;
+  text-align: right;
+  padding-bottom: 120px;
+}
+
+input[type="text"] {
+  height: 40px;
+  width: 200px;
+  color: #6449fc;
+  font-weight: 700;
+  font-size: 17px;
+}
+
+input[type="textarea"] {
+  height: 40px;
+  width: 200px;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+input[type="date"] {
+  height: 40px;
+  width: 150px;
+}
+
+input[type="text"],
+textarea {  
+  width: 500px;  
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+input:focus {
+  border-color: dodgerBlue;
+  box-shadow: 0 0 8px 0 dodgerBlue;
+}
+
+textarea:focus {
+  border-color: dodgerBlue;
+  box-shadow: 0 0 8px 0 dodgerBlue;
+}
+
+/* button {
+  display: inline-block;
+  min-width: 250px;
+  padding: 16px 0;
+  background: #6449fc;
+  color: #fff;
+  font-size: 15px;
+  line-height: 15px;
+  border-radius: 4px;
+} */
+
+button {
+  display: inline-block;
+  width: 168px;
+  height: 42px;
+  margin-top: 20px;
+  padding: 6px 20px;
+  background: #fff;
+  border: 1px solid #6449fc;
+  box-sizing: border-box;
+  border-radius: 56px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #6449fc;
+}

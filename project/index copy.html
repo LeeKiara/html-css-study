@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title><i-PMS></i-PMS></title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			header,
+			div,
+			main,
+			aside,
+			article,
+			section,
+			footer {
+				border: 1px dashed black;
+				margin: 10px 10px;
+			}
+
+			/* body 영역을 flexbox로 지정 */
+			body {
+				display: flex;
+				flex-direction: column;
+				border: 1px solid blue;
+				color: grey;
+			}
+
+			header,
+			footer {
+				flex: 1;
+			}
+
+			/* main 영역을 flexbox로 지정 */
+			main {
+				display: flex;
+				flex-direction: row;
+				border: 1px solid red;
+			}
+
+			aside {
+				flex: 1;
+				justify-content: top;
+			}
+
+			article {
+				flex: 5;
+      }
+
+      /* <!-- 최상단 탑 메뉴 --> */
+			body > div:nth-of-type(1) {
+				padding-top: 0px;
+				display: flex;
+				/* flex-direction: column; */
+				justify-content: space-between;
+				background-color: rgb(198, 198, 198);
+			}
+
+      /* <!-- 메인 컨텐츠(탑 메뉴) --> */
+			article> section > nav > ul {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-evenly;
+				list-style: none;
+				/* 최상위 html font-size(16px)의 1.8배 */
+				font-size: 1.8rem;
+				font-weight: 700;
+        
+			}
+
+      /* <!-- 메인 컨텐츠(탑 메뉴) 아래 라인 --> */
+			article> section > nav > div {
+				border: 2px solid dimgray;
+				margin: 0px 50px 0px 50px;
+			}
+
+      /* <!-- 좌측 공통 메뉴 --> */
+      aside > div {
+        text-align: center;
+      }
+      aside > div > button {
+        width: 176px;
+        height: 40px;
+        line-height: 40px;
+        background: #6449fc;    
+        border-radius: 4px;
+        margin: 0 auto;
+        color: #fff;
+        font-weight: 500;
+        text-align: center;
+      }
+
+      aside > div:nth-of-type(2) > ul {
+        line-height: 30px;
+        text-align: left;
+      }
+      /* <!-- 좌측 공통 메뉴 --> */
+
+			del .main > nav {
+				display: flex;
+				flex-direction: row;
+				/* justify-content: space-evenly; */
+				/* 최상위 html font-size(16px)의 1.8배 */
+				font-size: 1rem;
+				font-weight: 700;
+			}
+
+			/* } */
+		</style>
+	</head>
+
+	<body>
+    <!-- 최상단 탑 메뉴 -->
+		<div>div
+			<div>i-PMS</div>
+			<div></div>
+			<div>be login</div>
+		</div>
+
+		<main>main
+      <!-- 좌측 공통 메뉴 -->
+      <aside>aside
+				<div><button>+새 프로젝트</button></div>
+				<div>
+					<ul>
+						<li>프로젝트 현황</li>
+						<li>참여자 현황</li>
+						<li>TASK 현황</li>
+					</ul>
+				</div>
+			</aside>
+
+      <article>   article     
+        <!-- 메인 컨텐츠(탑 메뉴) -->
+        <section>section
+          <nav>
+            <ul>
+              <li>PROJECT</li>
+              <li>TEAM</li>
+              <li>TASK</li>
+            </ul>
+            <div></div>
+          </nav>
+        </section>
+
+        <!-- 메인 컨텐츠 -->
+        <section>메인 컨텐츠</section>
+      </article>
+
+<!-- 
+			<header>
+				<nav>
+					<ul>
+						<li>PROJECT</li>
+						<li>TEAM</li>
+						<li>TASK</li>
+					</ul>
+					<div></div>
+				</nav>
+			</header>
+
+
+
+			<article>
+				article
+				<div>
+					div
+					<section>section1</section>
+					<section>section2</section>
+					<section>section3</section>
+				</div> -->
+				
+			</article>
+		</main>
+
+		<footer>footer</footer>
+	</body>
+</html>
